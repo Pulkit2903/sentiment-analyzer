@@ -1,0 +1,51 @@
+review,cleaned_review,actual,predicted,correct
+"Fantastic item, my whole family enjoys using it.",fantast item whole famili enjoy use,1,1,1
+"Terrible customer service, they refused to help me.",terribl custom servic refus help,0,0,1
+Does not work as advertised. I want a refund.,not work advertis want refund,0,0,1
+"Doesn't fit as described, sizing is completely off.",doesnt fit describ size complet,0,0,1
+"Amazing value, performs better than products twice the price.",amaz valu perform better product twice price,1,1,1
+Stopped working after two days. No durability at all.,stop work two day no durabl,0,0,1
+Worst purchase ever. Complete waste of money.,worst purchas ever complet wast money,0,0,1
+"Terrible quality, broke after one day of use.",terribl qualiti broke one day use,0,0,1
+"Save your money, this product is absolute garbage.",save money product absolut garbag,0,0,1
+A must-have product. I've already recommended it to friends.,musthav product ive alreadi recommend friend,1,1,1
+"The quality is top-notch, better than expected.",qualiti topnotch better expect,1,1,1
+"Wonderful experience, will definitely buy again.",wonder experi definit buy,1,1,1
+Misleading description. The actual product is nothing like the photos.,mislead descript actual product noth like photo,0,0,1
+Loved the packaging and the product works perfectly.,love packag product work perfectli,1,1,1
+The customer service was excellent and very helpful.,custom servic excel help,1,1,1
+I'm really impressed with the quality of this item.,im realli impress qualiti item,1,1,1
+Not worth even half the price. Total disappointment.,not worth even half price total disappoint,0,0,1
+Waited three weeks for delivery and got the wrong item.,wait three week deliveri got wrong item,0,0,1
+This is a scam. The product is nothing like advertised.,scam product noth like advertis,0,0,1
+Excellent build quality and beautiful design.,excel build qualiti beauti design,1,1,1
+Five stars! This is exactly what I was looking for.,five star exactli look,1,0,0
+This exceeded all my expectations. Truly remarkable.,exceed expect truli remark,1,1,1
+Quick delivery and the item is in perfect condition.,quick deliveri item perfect condit,1,1,1
+The product stopped working after just one week.,product stop work one week,0,0,1
+Extremely slow shipping and the product is defective.,extrem slow ship product defect,0,0,1
+"This product is absolutely amazing, I love it!",product absolut amaz love,1,1,1
+Packaging was damaged and the item inside was scratched.,packag damag item insid scratch,0,0,1
+Very disappointed with this product. Not as described.,disappoint product not describ,0,0,1
+Horrible experience from start to finish. Never again.,horribl experi start finish never,0,0,1
+Perfect fit and great material. Exceeded expectations.,perfect fit great materi exceed expect,1,1,1
+"Poor quality material, feels very cheap and flimsy.",poor qualiti materi feel cheap flimsi,0,0,1
+"Super happy with my purchase, thank you so much!",super happi purchas thank much,1,1,1
+"Completely useless product, don't waste your time.",complet useless product dont wast time,0,0,1
+Great quality and fast shipping. Very satisfied.,great qualiti fast ship satisfi,1,1,1
+I've tried many similar products but this one is the best.,ive tri mani similar product one best,1,1,1
+Best purchase I've made this year. Highly recommend!,best purchas ive made year highli recommend,1,1,1
+I would give zero stars if I could. Avoid this seller.,would give zero star could avoid seller,0,0,1
+Cheaply made junk. Falls apart immediately.,cheapli made junk fall apart immedi,0,0,1
+Works exactly as described. No complaints at all.,work exactli describ no complaint,1,1,1
+"The quality is awful, I regret buying this.",qualiti aw regret buy,0,0,1
+"Incredible product, works like a charm every time.",incred product work like charm everi time,1,1,1
+Pleasantly surprised by the quality at this price point.,pleasantli surpris qualiti price point,1,1,1
+"So glad I bought this, it makes my life easier.",glad bought make life easier,1,0,0
+Regret this purchase entirely. Wish I could return it.,regret purchas entir wish could return,0,0,1
+Smooth transaction and the product is just wonderful.,smooth transact product wonder,1,1,1
+Outstanding performance and great value for money.,outstand perform great valu money,1,1,1
+Product malfunctioned on the first use. Very frustrating.,product malfunct first use frustrat,0,0,1
+Very well made and durable. Worth every penny.,well made durabl worth everi penni,1,0,0
+The item arrived damaged and customer support was unhelpful.,item arriv damag custom support unhelp,0,0,1
+Arrived late and broken. Worst online shopping experience.,arriv late broken worst onlin shop experi,0,0,1

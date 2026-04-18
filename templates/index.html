@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analyzer</h1>
+        <p class="subtitle">Powered by Python ML &mdash; TF-IDF + Naive Bayes / Logistic Regression / SVM</p>
+
+        <div class="input-section">
+            <textarea
+                id="reviewInput"
+                placeholder="Type or paste a review here..."
+                rows="4"
+            ></textarea>
+            <button id="analyzeBtn" onclick="analyze()">Analyze Sentiment</button>
+        </div>
+
+        <div id="result" class="result hidden">
+            <div id="sentimentIcon" class="sentiment-icon"></div>
+            <div id="sentimentLabel" class="sentiment-label"></div>
+            <div id="confidence" class="confidence"></div>
+        </div>
+
+        <div class="examples">
+            <p><strong>Try these examples:</strong></p>
+            <button class="example-btn" onclick="tryExample(this)">This product is absolutely amazing!</button>
+            <button class="example-btn" onclick="tryExample(this)">Terrible quality, broke after one day.</button>
+            <button class="example-btn" onclick="tryExample(this)">It's okay, nothing special.</button>
+            <button class="example-btn" onclick="tryExample(this)">Best purchase I've ever made!</button>
+            <button class="example-btn" onclick="tryExample(this)">Complete waste of money, very disappointed.</button>
+        </div>
+    </div>
+
+    <script>
+        async function analyze() {
+            const text = document.getElementById('reviewInput').value.trim();
+            if (!text) return;
+
+            const btn = document.getElementById('analyzeBtn');
+            btn.textContent = 'Analyzing...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/api/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text })
+                });
+                const data = await response.json();
+
+                const result = document.getElementById('result');
+                const icon = document.getElementById('sentimentIcon');
+                const label = document.getElementById('sentimentLabel');
+                const conf = document.getElementById('confidence');
+
+                result.classList.remove('hidden', 'positive', 'negative');
+
+                if (data.sentiment === 'positive') {
+                    result.classList.add('positive');
+                    icon.textContent = '+';
+                    label.textContent = 'Positive Sentiment';
+                } else {
+                    result.classList.add('negative');
+                    icon.textContent = '-';
+                    label.textContent = 'Negative Sentiment';
+                }
+
+                if (data.confidence) {
+                    conf.textContent = `Confidence: ${data.confidence}%`;
+                } else {
+                    conf.textContent = '';
+                }
+            } catch (err) {
+                alert('Error connecting to the API. Make sure the server is running.');
+            }
+
+            btn.textContent = 'Analyze Sentiment';
+            btn.disabled = false;
+        }
+
+        function tryExample(btn) {
+            document.getElementById('reviewInput').value = btn.textContent;
+            analyze();
+        }
+
+        // Allow Ctrl+Enter to submit
+        document.getElementById('reviewInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                analyze();
+            }
+        });
+    </script>
+</body>
+</html>

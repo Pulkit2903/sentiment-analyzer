@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# NLTK data (downloaded at build time)
+nltk_data/
+
+# R generated plots (regenerated from data)
+data/plot_*.png
+
+# Environment
+.env

@@ -1,0 +1,13 @@
+# Render Blueprint — auto-configures deployment when you connect the repo
+# Docs: https://docs.render.com/blueprint-spec
+
+services:
+  - type: web
+    name: sentiment-analyzer
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python build.py
+    startCommand: gunicorn api.app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
